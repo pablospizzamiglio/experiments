@@ -62,7 +62,7 @@ def ok(body, headers=None):
     """Create a response object representing a successful operation.
 
         :param headers: a dict
-        :return: a RedirectResponse
+        :return: a Response
     """
     return Response(headers=headers, body=body)
 
@@ -71,7 +71,7 @@ def no_content(headers=None):
     """Create a response object representing a successful operation with no content.
 
         :param headers: a dict
-        :return: a RedirectResponse
+        :return: a Response
     """
     return Response(headers=headers, code=HTTPStatus.NO_CONTENT)
 
@@ -80,7 +80,7 @@ def redirect(url):
     """Create a response object representing redirection.
 
         :param url: a URL
-        :return: a RedirectResponse
+        :return: a Response
     """
     headers = {
         "Location": url,
